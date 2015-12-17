@@ -7,8 +7,6 @@ var connect = require('gulp-connect');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
-var clean = require('gulp-clean');
-var runSequence = require('run-sequence');
 
 var	input  = {
       'javascript': './app/js/**/*',
@@ -28,12 +26,6 @@ var	input  = {
     };
 
 /* Tasks definition */
-
-// Clean dist folder
-gulp.task('clean', function() {
-    gulp.src(output.dist_all)
-      .pipe(clean({force: true}));
-});
 // Minify css
 gulp.task('minify-css', function() {
   var opts = {comments:true,spare:true};
@@ -89,10 +81,4 @@ gulp.task('watch', function() {
 
 
 // Default task, build and watch for changes
-gulp.task('default1', function() {
-  runSequence(
-    ['clean'],
-    ['minify-css', 'minify-js', 'copy-html-files', 'copy-bower-components', 'copy-images', 'connectDist', 'watch']
-  );
-});
 gulp.task('default', ['minify-css', 'minify-js', 'copy-html-files', 'copy-bower-components', 'copy-images', 'connectDist', 'watch']);
