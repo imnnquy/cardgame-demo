@@ -5,11 +5,16 @@
 
 .card {
     display: inline-block;
+    /* Background color for card container */
     background: #4b258a;
-    background: -webkit-linear-gradient(#4b258a, #a852b4); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#4b258a, #a852b4); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#4b258a, #a852b4); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#4b258a, #a852b4); /* Standard syntax */
+    background: -webkit-linear-gradient(#4b258a, #a852b4);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4b258a, #a852b4);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4b258a, #a852b4);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4b258a, #a852b4);
+    /* Standard syntax */
     margin: .5%;
     padding: .5%;
     width: 13%;
@@ -40,6 +45,35 @@
     -webkit-transition: opacity .25s ease-in-out;
 }
 
+.control-container {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.secondes {
+    margin-right: 10%;
+    color: #b8860b;
+}
+
+.moves_value {
+    color: #8b0000;
+    margin-right: 10%;
+}
+
+.icon-control {
+    font-size: 150%;
+    margin-right: 2%;
+    color: #00008b;
+}
+
+.play-button-guide {
+    margin-top: 5%;
+    font-weight: bold;
+}
+.semi-transparent {
+    opacity: .5;
+}
+
 @media all and (orientation:portrait) {
     .game-container {
         width: 100%;
@@ -50,6 +84,6 @@
 @media all and (orientation:landscape) {
     .game-container {
         width: 60%;
-        margin: 0 auto;
+        margin: 1% auto;
     }
 }
