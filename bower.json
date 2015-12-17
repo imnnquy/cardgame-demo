@@ -1,0 +1,29 @@
+{
+  "name": "card-game",
+  "description": "Simple 5x5 card game",
+  "main": "index.js",
+  "authors": [
+    "Quy Nguyen"
+  ],
+  "license": "None",
+  "keywords": [
+    "card",
+    "game"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6",
+    "font-awesome": "fontawesome#~4.5.0"
+  }
+}

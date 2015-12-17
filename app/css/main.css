@@ -1,0 +1,55 @@
+.cards {
+    text-align: center;
+    padding-top: 1%;
+}
+
+.card {
+    display: inline-block;
+    background: #4b258a;
+    background: -webkit-linear-gradient(#4b258a, #a852b4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4b258a, #a852b4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4b258a, #a852b4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4b258a, #a852b4); /* Standard syntax */
+    margin: .5%;
+    padding: .5%;
+    width: 13%;
+    /* border radius */
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.card-image {
+    opacity: 0;
+}
+
+.card img {
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.fade {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+@media all and (orientation:portrait) {
+    .game-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media all and (orientation:landscape) {
+    .game-container {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
