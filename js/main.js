@@ -32,18 +32,23 @@
             self.isWaitingForChecking = false;
             self.moves = 0;
             self.times = 0;
+            self.started = false;
         }
         init();
         self.clickStart = function() {
             $('#start-btn').attr('disabled', true)
             $('.cards').removeClass('semi-transparent');
             self.victoryMessage = "";
+            self.started = true;
             $interval(function() {
                 self.times += 1;
             }, 1000);
         }
         /* Function to handle card clicked event */
         self.clickCard = function(card) {
+            if(!self.started){
+                return;
+            }
             var cardID = card.cardID;
             var currentCardObj = $('#' + cardID);
             /* If clicked card is not visible, show it */
