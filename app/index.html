@@ -16,12 +16,12 @@
             <div class="col-sm-2">
                 <div class="control-container">
                     <span class="glyphicon glyphicon-time icon-control" title="Time"></span>
-                    <span class="secondes" title="Time"> {{ctrl.times}}</span>
+                    <span class="secondes ng-cloak" title="Time"> {{ctrl.times}}</span>
                     <span class="glyphicon glyphicon-random icon-control" title="Move"></span>
-                    <span class="moves_value" title="Move"> {{ctrl.moves}}</span>
+                    <span class="moves_value ng-cloak" title="Move"> {{ctrl.moves}}</span>
 
                     <div class="play-button-guide">
-                        <div data-ng-if="ctrl.victoryMessage">{{ctrl.victoryMessage}}</div>
+                        <div data-ng-if="ctrl.victoryMessage" class="ng-cloak">{{ctrl.victoryMessage}}</div>
                         <span>Press <button id="start-btn" class="btn btn-lg btn-success start-button" data-ng-click="ctrl.clickStart()"><span class="glyphicon glyphicon-play-circle"></span></button> to play</span>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="board">
                     <div class="cards semi-transparent">
                         <div class="card" data-ng-repeat-start="card in ctrl.cardList" data-ng-click="ctrl.clickCard(card)">
-                            <img src="/img/{{card.cardValue}}.png" id="{{card.cardID}}" quelimg="card-{{card.cardValue}}" class="card-image">
+                            <img src="/img/{{card.cardValue}}.png" id="{{card.cardID}}" quelimg="card-{{card.cardValue}}" class="card-image ng-cloak">
                         </div>
                         <br data-ng-repeat-end data-ng-if="(($index+1)%6 == 0)"></br>
                     </div>
